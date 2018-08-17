@@ -1,1 +1,48 @@
-<h1>recursion</h1>
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>recursion</title>
+        <style>
+            html {
+                padding:20px;
+                background-color:#166088;
+                color:#dbe9ee;
+                font-family:Consolas;
+                white-space:nowrap;
+            }
+            .content {
+                margin-left:50px;
+                padding:20px;
+                border:2px solid white;
+                overflow:scroll;
+                height:20%;
+            }
+        </style>
+        <script>
+            var count = 0;
+            document.addEventListener('DOMContentLoaded', function() {
+                document.body.onkeyup = function(e) {
+                    if (e.keyCode == 32) {
+                        var div = document.getElementById("n" + count);
+                        div.innerHTML =
+                            "<h1>recursion!</h1>" +
+                            "<div class=\"content\" id=\"n" + (count + 1) + "\">" +
+                            "    <h2>press space!</h2>" +
+                            "</div>"
+                        count++;
+                    }
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+         <h1>recursion!</h1>
+        <div class="content" id="n0">
+             <h2>press space!</h2>
+        </div>
+    </body>
+
+</html>
