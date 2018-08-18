@@ -35,6 +35,19 @@
                     }
                 }
             });
+            document.addEventListener('DOMContentLoaded', function() {
+                document.body.onclick = function(e) {
+                    if (e.keyCode == 32) {
+                        var div = document.getElementById("n" + count);
+                        div.innerHTML =
+                            "<h1>recursion!</h1>" +
+                            "<div class=\"content\" id=\"n" + (count + 1) + "\">" +
+                            "    <h2>press space!</h2>" +
+                            "</div>"
+                        count++;
+                    }
+                }
+            });
         </script>
     </head>
 
